@@ -1,0 +1,12 @@
+.resizable-input-container {
+    position: relative;
+  }
+  
+  .resizable-input {
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    resize: both; /* Enables resizing */
+    overflow: auto; /* Ensures scrollbars appear when content overflows */
+  }
+  

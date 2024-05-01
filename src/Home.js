@@ -1,5 +1,18 @@
 import React from 'react';
+import BlogForm from './Components/BlogForm';
 
-const Home = () => <h1>Home Page</h1>;
+
+const Home = () => {
+
+
+return(
+   <><BlogForm
+
+   /></> 
+  
+);
+
+
+};
 
 export default Home;
