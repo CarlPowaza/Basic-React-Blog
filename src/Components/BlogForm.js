@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import '../ResizableInput.css';
 const BlogForm = ( BlogList) =>  {
-  const [responses, setResponses] = useState({
+  const [blogPosts, setBlogPosts] = useState({
     NewBlogTitle: '',
     NewBlogBody: ''
   });
 
-  //TODO ADD ID. ADD UserID.
-
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setResponses(prev => ({
+    setBlogPosts(prev => ({
       ...prev,
       [name]: value
     }));
@@ -18,12 +16,24 @@ const BlogForm = ( BlogList) =>  {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle the form submission here, such as sending data to a server or displaying it on the screen
-   // if()
-  
-  
-    console.log(JSON.stringify(responses));
+
+    console.log(JSON.stringify(blogPosts));
+
+    // SETUP A CHECK FOR IT THE ITEM EXISTS IN STORAGE
+
+
+
+
+
+
+
+
+
+
   };
+
+
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -33,7 +43,7 @@ const BlogForm = ( BlogList) =>  {
         <input
           type="text"
           name="NewBlogTitle"
-          value={responses.handleChange}
+          value={blogPosts.handleChange}
           onChange={handleChange}
         />
       </label>
@@ -43,7 +53,7 @@ const BlogForm = ( BlogList) =>  {
         <textarea
           type="text"
           name="NewBlogBody"
-          value={responses.NewBlogBody}
+          value={blogPosts.NewBlogBody}
           onChange={handleChange}
           className="resizable-input"
         />
